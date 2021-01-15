@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prototype.MetingPagina">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,40,0,0"/>
+            <Label Text="Voer hier uw meetgegevens in" TextColor="White"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Meting" TextColor="White" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                </Label>
+                <Entry Text="{Binding GrasMeting}" Placeholder="Meting in in getallen" TextColor="White"  Grid.Row="1" Grid.Column="1" />
+                <Label Text="Eenheid" TextColor="White"  Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                </Label>
+                <Entry Text="{Binding Eenheid}" Placeholder="Meeteenheid (mm/cm)" TextColor="White"  Grid.Row="2" Grid.Column="1" />
+                <Label Text="Datum" TextColor="White"  Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                </Label>
+                <Entry Text="{Binding Dag}" Placeholder="Meetdatum bijv. 12-01-21" TextColor="White"  Grid.Row="3" Grid.Column="1" />
+            </Grid>
+
+            <Button Text="Opslaan"  HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Clicked="Opslaan_Clicked"/>
+
+            <Button Text="Meting Annuleren"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" Clicked="Annuleren_Clicked"/>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+    
+    

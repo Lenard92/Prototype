@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prototype.MetingListPage">
+    
+    <ContentPage.Content>
+        
+        <ListView x:Name="MeetListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Meting_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="Meting van" Detail="{Binding Dag}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

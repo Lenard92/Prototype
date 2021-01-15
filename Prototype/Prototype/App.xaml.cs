@@ -7,11 +7,25 @@ namespace Prototype
 {
     public partial class App : Application
     {
+        static MetingDatabase database;
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MetingListPage());
+        }
+
+        public static MetingDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new MetingDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Meting.db3"));
+                }
+                return database;
+            }
         }
 
         protected override void OnStart()
