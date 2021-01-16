@@ -15,6 +15,7 @@ namespace Prototype
         
 
         public static int LoginIconHeight = 120;
+        public static int GripOpGrasHeight = 120;
     }
 }
 
