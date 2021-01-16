@@ -5,7 +5,7 @@
     
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,10,0,0"/>
+            <Image x:Name="GripOpGras" Source="GripOpGras.png" Margin="0,10,0,0"/>
             <Label Text="Voer hier uw meetgegevens in of pas ze aan" TextColor="White"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
          
 

@@ -15,6 +15,7 @@ namespace Prototype
         public static Color TextColor = Color.White;
 
         public static int LoginIconHeight = 120;
+        public static int GripOpGrasHeight = 120;
     }
 }
 

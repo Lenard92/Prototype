@@ -17,7 +17,7 @@ namespace Prototype
         {
             InitializeComponent();
             BackgroundColor = Constants.BackgroundColor;
-            LogInIcon.HeightRequest = Constants.LoginIconHeight;
+            GripOpGras.HeightRequest = Constants.GripOpGrasHeight;
 
         }
         async void DatePicker_OnDateSelected(object sender, DateChangedEventArgs e)

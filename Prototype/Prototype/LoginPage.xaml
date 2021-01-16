@@ -8,7 +8,7 @@
         <StackLayout x:Name="MasterLayout">
 
             <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
-                <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,80,0,0"/>
+                <Image x:Name="GripOpGras" Source="GripOpGras.png" Margin="0,80,0,0"/>
             </StackLayout>
             <StackLayout x:Name="LoginEntriesStack">
                 <StackLayout.Padding>

@@ -164,4 +164,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\LoginIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\GripOpGras.png" />
+  </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@ namespace Prototype
             Lbl_Username.TextColor = Constants.MainTextColor;
             Lbl_Password.TextColor = Constants.MainTextColor;
             ActivitySpinner.IsVisible = false;
-            LogInIcon.HeightRequest = Constants.LoginIconHeight;
+            GripOpGras.HeightRequest = Constants.GripOpGrasHeight;
 
         
         }
