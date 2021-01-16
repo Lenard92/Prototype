@@ -9,14 +9,14 @@ using Xamarin.Forms.Xaml;
 
 namespace Prototype
 {
-	//[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MetingListPage : ContentPage
-	{
-		public MetingListPage ()
-		{
-			InitializeComponent ();
-            this.Title = "Bewerkbare meetlijst";
-            
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Welkom : ContentPage
+    {
+        public Welkom()
+        {
+            InitializeComponent();
+            this.Title = "";
+
 
             BackgroundColor = Constants.BackgroundColor;
             var toolbarItem = new ToolbarItem
@@ -27,27 +27,28 @@ namespace Prototype
             {
                 await Navigation.PushAsync(new MetingPagina()
                 {
-                    BindingContext = new Meting()
+                    BindingContext = new User()
                 });
             };
             ToolbarItems.Add(toolbarItem);
-		}
-      
+        }
+
         protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            MeetListView.ItemsSource = await App.Database.GetMetingAsync();
+            MeetListView.ItemsSource = await App.UDatabase.GetUserAsync();
         }
 
         async void Meting_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem != null) {
+            if (e.SelectedItem != null)
+            {
                 await Navigation.PushAsync(new MetingPagina()
                 {
                     BindingContext = e.SelectedItem
                 });
             }
         }
-	}
+    }
 }

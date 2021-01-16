@@ -12,6 +12,7 @@ namespace Prototype
 
         public static Color BackgroundColor = Color.RoyalBlue;
         public static Color MainTextColor = Color.White;
+        public static Color TextColor = Color.White;
 
         public static int LoginIconHeight = 120;
     }

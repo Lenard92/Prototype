@@ -9,9 +9,10 @@ namespace Prototype
     {
         [PrimaryKey, AutoIncrement]
         public int MeetId { get; set; }
-        public int GrasMeting { get; set; }
+        public string GrasMeting { get; set; }
         public string Eenheid { get; set; }
         public DateTime Dag { get; set; }
+        
     }
 
 }

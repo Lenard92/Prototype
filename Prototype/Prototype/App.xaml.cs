@@ -8,7 +8,8 @@ namespace Prototype
     public partial class App : Application
     {
         static MetingDatabase database;
-
+        static UserDatabase udatabase;
+            
         public App()
         {
             InitializeComponent();
@@ -25,6 +26,17 @@ namespace Prototype
                     database = new MetingDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("Meting.db3"));
                 }
                 return database;
+            }
+        }
+        public static UserDatabase UDatabase
+        {
+            get
+            {
+                if (udatabase == null)
+                {
+                    udatabase = new UserDatabase(DependencyService.Get<ILocalFileHelper>().GetLocalFilePath("User.db3"));
+                }
+                return udatabase;
             }
         }
 

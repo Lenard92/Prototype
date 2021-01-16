@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prototype.CalenderPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,10,0,0"/>
+            <Label Text="Selecteer een dag"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
+            <DatePicker x:Name="DatePicker"
+                        MinimumDate="01/01/2020"
+                        MaximumDate="12/12/2022"
+                        DateSelected="DatePicker_OnDateSelected"
+                        />
+           
+
+            <Button Text="Terug naar meetinvoer"  HorizontalOptions="Center" BackgroundColor="Violet" TextColor="White" Clicked="Terug_Clicked"/>
+            <Button Text="Terug naar meetoverzicht"  HorizontalOptions="Center" BackgroundColor="Violet" TextColor="White" Clicked="VerderTerug_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

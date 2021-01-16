@@ -5,8 +5,12 @@
     
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,40,0,0"/>
-            <Label Text="Voer hier uw meetgegevens in" TextColor="White"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,10,0,0"/>
+            <Label Text="Voer hier uw meetgegevens in of pas ze aan" TextColor="White"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+         
+
+
+
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -14,18 +18,38 @@
                 </Grid.ColumnDefinitions>
                 <Label Text="Meting" TextColor="White" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
                 </Label>
-                <Entry Text="{Binding GrasMeting}" Placeholder="Meting in in getallen" TextColor="White"  Grid.Row="1" Grid.Column="1" />
+                <Entry Text="{Binding GrasMeting}" Keyboard="Numeric" Placeholder="Meting in getallen" TextColor="White"  Grid.Row="1" Grid.Column="1"  />
                 <Label Text="Eenheid" TextColor="White"  Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
                 </Label>
                 <Entry Text="{Binding Eenheid}" Placeholder="Meeteenheid (mm/cm)" TextColor="White"  Grid.Row="2" Grid.Column="1" />
-                <Label Text="Datum" TextColor="White"  Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                <Label Text="" TextColor="White"  Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
                 </Label>
-                <Entry Text="{Binding Dag}" Placeholder="Meetdatum bijv. 12-01-21" TextColor="White"  Grid.Row="3" Grid.Column="1" />
+ 
             </Grid>
-
-            <Button Text="Opslaan"  HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Clicked="Opslaan_Clicked"/>
-
-            <Button Text="Meting Annuleren"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" Clicked="Annuleren_Clicked"/>
+         
+            <StackLayout
+            Orientation="Vertical">
+                <Label Text="Klik op onderstaande datum om deze aan te passen" TextColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                
+                
+                
+                </Label>
+                <DatePicker x:Name="DatePicker"
+                           
+                        MinimumDate="01/01/2020 "
+                        MaximumDate="12/12/2022 "
+                        TextColor="White"
+                        DateSelected="DatePicker_OnDateSelected"
+                        />
+                <StackLayout
+                    Orientation="Horizontal">
+                    
+                    <Button Text="Opslaan"  HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" WidthRequest="110" HeightRequest="60" Clicked="Opslaan_Clicked"/>
+                    <Button Text="verwijder"  HorizontalOptions="Center" BackgroundColor="Red" TextColor="White" WidthRequest="110" HeightRequest="60" Clicked="Verwijderen_Clicked"/>
+                    <Button Text="Annuleer"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" WidthRequest="110" HeightRequest="60" Clicked="Annuleren_Clicked"/>
+                </StackLayout>
+        </StackLayout>
+           
 
 
         </StackLayout>
