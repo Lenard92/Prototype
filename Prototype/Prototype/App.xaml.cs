@@ -7,19 +7,22 @@ namespace Prototype
 {
     public partial class App : Application
     {
+        // In deze statements worden de databases via de controllers omgezet in fields
         static MetingDatabase database;
         static UserDatabase udatabase;
-            
+        
+        // Hier wordt de beginpagina bepaald
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MetingListPage());
+            //MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         public static MetingDatabase Database
         {
-            get
+            get  // de get functie haalt de database op, en indien de database nog niet bestaat maakt hij deze aan
             {
                 if (database == null)
                 {
@@ -30,7 +33,7 @@ namespace Prototype
         }
         public static UserDatabase UDatabase
         {
-            get
+            get   // de get functie haalt de database op, en indien de database nog niet bestaat maakt hij deze aan
             {
                 if (udatabase == null)
                 {
@@ -39,6 +42,7 @@ namespace Prototype
                 return udatabase;
             }
         }
+        //onderstaande functies worden standaard gegenereerd, tijdens het ontwikkelen van het MVP was het nog niet noodzakelijk om hier iets mee te doen 
 
         protected override void OnStart()
         {

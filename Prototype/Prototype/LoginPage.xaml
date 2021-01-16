@@ -10,9 +10,11 @@
             <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
                 <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,80,0,0"/>
             </StackLayout>
+            <!--Dit gedeelte moet ervoor zorgen dat de pagina mooi schaalt met verschillende schermafmetingen-->
             <StackLayout x:Name="LoginEntriesStack">
                 <StackLayout.Padding>
                     <OnIdiom x:TypeArguments="Thickness">
+                         <!--Er is een bug in IntelliSense die dit ziet als een fout, maar dat is niet daadwerkelijk aan de orde-->
                         <OnIdiom.Phone>40,0,40,0</OnIdiom.Phone>
                         <OnIdiom.Tablet>140,150,140,0</OnIdiom.Tablet>
                     </OnIdiom>
@@ -21,10 +23,13 @@
 
 
 
-
-
+            
+                <!--De activityindicator staat tijdens development uit, maar zou de user meer feedback moeten geven over de verwerking van zijn request of input-->
+                
                 <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="False" />
-
+                
+                <!--De combinatie van username en password is nodig om de user op te slaan in de userdatabase in combinatie met een unieke key die de user.Id vormt-->            
+                
                 <Label x:Name="Lbl_Username" Text="Gebruikersnaam"/>
                 <Entry x:Name="Entry_Username" Text="{Binding Username}" Placeholder="Voer hier uw gebruikersnaam in"/>
                 <Label x:Name="Lbl_Password" Text="wachtwoord"/>

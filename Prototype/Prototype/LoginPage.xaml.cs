@@ -18,6 +18,7 @@ namespace Prototype
         }
         void Init()
         {
+            // Dit is een voorbeeld van hoe je de constants kunt aanroepen
             BackgroundColor = Constants.BackgroundColor;
             Lbl_Username.TextColor = Constants.MainTextColor;
             Lbl_Password.TextColor = Constants.MainTextColor;
@@ -26,6 +27,7 @@ namespace Prototype
 
         
         }
+        // Deze functie gaat na of er gegevens zijn ingevoerd (zie User.cs) en navigeert indien true naar de welkompagina
         async void SignInProcedure(object sender, EventArgs e)
         {
             
@@ -36,7 +38,7 @@ namespace Prototype
                 await DisplayAlert("Login", "Login Succes", "Oke");
                 
                 await App.UDatabase.SaveUserAsync(user);
-                await Navigation.PushAsync(new Welkom());
+                await Navigation.PushAsync(new WelkomDashboard());
                 //if (Device.OS == TargetPlatform.Android) ;
 
 
@@ -50,6 +52,8 @@ namespace Prototype
 
 
                 await DisplayAlert("Login", "Login not correct", "Oke");
+                await Navigation.PopAsync();
+                await DisplayAlert("Uw invoer is leeg","Probeer het nog eens", "Oke");
             }
 
         }

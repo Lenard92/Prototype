@@ -5,7 +5,7 @@
 
 
     <ContentPage.Content>
-
+        <!--Hier komt een lijst met alle geregistreerde users, deze is niet toegankelijk via de app zelf maar wordt gebruikt voor testdoeleinden-->
 
         <ListView x:Name="MeetListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Meting_ItemSelected">
             <ListView.ItemTemplate>

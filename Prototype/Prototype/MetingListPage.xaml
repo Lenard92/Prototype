@@ -6,6 +6,9 @@
 
     <ContentPage.Content>
      
+        <!--Deze listview presenteert alle geregistreerde meetgegevens in een lijst die emt elke entry wordt bijgewerkt--> 
+        
+        <!--ik wilde hier nog een collection view van maken maar voor nu heeft dat geen prioriteit-->
 
         <ListView x:Name="MeetListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Meting_ItemSelected">
             <ListView.ItemTemplate>

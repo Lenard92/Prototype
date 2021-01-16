@@ -8,9 +8,9 @@
             <Image x:Name="LogInIcon" Source="LoginIcon.png" Margin="0,10,0,0"/>
             <Label Text="Voer hier uw meetgegevens in of pas ze aan" TextColor="White"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
          
+            <!--Er wordt gebruik gemaakt van bindings voor datatransfer naar de database, dit zou eventueel ook met entries kunnen-->
 
-
-
+            <!--De gridrow houdt alles bij en presenteert de gegevens op overzichtelijke wijze-->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
@@ -31,7 +31,7 @@
             Orientation="Vertical">
                 <Label Text="Klik op onderstaande datum om deze aan te passen" TextColor="White" Grid.Row="0" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
                 
-                
+                <!--De datepicker selecteert een datum en slaat deze indien goedgekeurd door gebruiker op in de Meetgegevens.Dag property-->
                 
                 </Label>
                 <DatePicker x:Name="DatePicker"
@@ -44,6 +44,7 @@
                 <StackLayout
                     Orientation="Horizontal">
                     
+                    <!--De opslagknop geeft de huidige datum en tijd mee in de entry die de new user wordt-->
                     <Button Text="Opslaan"  HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" WidthRequest="110" HeightRequest="60" Clicked="Opslaan_Clicked"/>
                     <Button Text="verwijder"  HorizontalOptions="Center" BackgroundColor="Red" TextColor="White" WidthRequest="110" HeightRequest="60" Clicked="Verwijderen_Clicked"/>
                     <Button Text="Annuleer"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" WidthRequest="110" HeightRequest="60" Clicked="Annuleren_Clicked"/>

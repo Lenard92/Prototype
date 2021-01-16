@@ -13,9 +13,12 @@ using Android.Views;
 using Android.Widget;
 using Environment = System.Environment;
 
+// De compiler moet weten dat dit een relevante dependency is, anders kan de app niet compilen
+
 [assembly :Dependency(typeof(LocalFileHelper))]
 namespace Prototype.Droid
 {
+    // Deze filehelper vraagt de locatie van de database op via de interface of genereert zelf een lokaal path
     class LocalFileHelper : ILocalFileHelper
     {
         public string GetLocalFilePath(string fileName)

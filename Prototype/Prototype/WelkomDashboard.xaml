@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Prototype.WelkomDashboard">
+
+
+
+
+<StackLayout>
+            
+        <!--In plaats van de welkom pagina, waar de list getoond wordt, gaat de user na het inloggen naar een dashboard-->
+
+
+        <StackLayout
+            Orientation="Vertical">
+            <Label Text="Welkom!" TextColor="White"   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
+
+
+
+
+
+
+            <StackLayout
+                    Orientation="Horizontal">
+                <Button Text="Naar uw activiteiten"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" WidthRequest="170" HeightRequest="80" Clicked="NaarMeetLijst_Clicked"/>
+                <Button Text="terug naar het inlogscherm"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked"/>
+                      
+
+           
+            
+
+
+            </StackLayout>
+        </StackLayout>
+</StackLayout>
+
+
+
+
+
+</ContentPage>
