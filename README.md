@@ -30,6 +30,6 @@ Hoewel de basis goed werkt, zou een goed startpunt voor doorontwikkeling zijn om
 Veel succes met de doorontwikkeling, mocht het nodig zijn ben ik te bereiken via:
 
 Lenard92 @Github
-email: lvwinssen@student.che.nl
-telefoon: 0621904368
+mailto: lvwinssen@student.che.nl
+
 
