@@ -16,8 +16,8 @@ namespace Prototype
         {
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new LoginPage());
             MainPage = new NavigationPage(new LoginPage());
+            //MainPage = new NavigationPage(new MetingListPage());
         }
 
         public static MetingDatabase Database

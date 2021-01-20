@@ -8,25 +8,43 @@
             <Image x:Name="GripOpGras" Source="GripOpGras.png" Margin="0,10,0,0"/>
             <Label Text="Voer hier uw meetgegevens in of pas ze aan" TextColor="White"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
          
-            <!--Er wordt gebruik gemaakt van bindings voor datatransfer naar de database, dit zou eventueel ook met entries kunnen-->
+            <!--Er wordt gebruik gemaakt entries die bindings naar de betreffende class sturen om de gegevens van de tabel mee te vullen-->
 
-            <!--De gridrow houdt alles bij en presenteert de gegevens op overzichtelijke wijze-->
+            <!--De gridrow houdt alles bij en presenteert de gegevens op overzichtelijke wijze in vakken-->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Meting" TextColor="White" Grid.Row="1" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                
+                <Label Text="Meting" 
+                       TextColor="White" 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
                 </Label>
-                <Entry Text="{Binding GrasMeting}" Keyboard="Numeric" Placeholder="Meting in getallen" TextColor="White"  Grid.Row="1" Grid.Column="1"  />
-                <Label Text="Eenheid" TextColor="White"  Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                
+                <Entry Text="{Binding GrasMeting}" 
+                       Keyboard="Numeric" 
+                       Placeholder="Meting in getallen" 
+                       TextColor="White"  
+                       Grid.Row="1" 
+                       Grid.Column="1"  />
+                
+                <Label Text="Eenheid" 
+                       TextColor="White"  
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
                 </Label>
-                <!--<Entry Text="{Binding Eenheid}" Placeholder="Meeteenheid (mm/cm)" TextColor="White"  Grid.Row="2" Grid.Column="1" />-->
-
+                
                 <Picker x:Name="Picker" 
                         Grid.Row="2" 
                         Grid.Column="1"
-                        Title="{Binding Eenheid}"
+                        Title="{Binding Eenheid}" 
+                        TextColor="White"
                         SelectedIndex="{Binding SelectedIndex}"                       
                         SelectedIndexChanged="Picker_SelectedIndexChanged"                                                
                     >
@@ -36,7 +54,12 @@
                     <x:String>DM</x:String>
             </Picker.Items>
                              </Picker>
-                <Label Text="" TextColor="White"  Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                <Label Text="" 
+                       TextColor="White"  
+                       Grid.Row="3" 
+                       Grid.Column="0" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
                 </Label>
  
             </Grid>
@@ -48,13 +71,11 @@
                 <!--De datepicker selecteert een datum en slaat deze indien goedgekeurd door gebruiker op in de Meetgegevens.Dag property-->
                 
                 </Label>
-                <DatePicker x:Name="DatePicker"
-                            
-                           
+                <DatePicker x:Name="DatePicker"                                                    
                         MinimumDate="01/01/2020 "
                         MaximumDate="12/12/2022 "
-                        TextColor="White"
-                        DateSelected="DatePicker_OnDateSelected"
+                        TextColor="White"                        
+                        DateSelected="DatePicker_OnDateSelected"                        
                         />
                 <StackLayout
                     Orientation="Horizontal">

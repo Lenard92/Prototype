@@ -20,14 +20,12 @@ namespace Prototype
             BackgroundColor = Constants.BackgroundColor;
             GripOpGras.HeightRequest = Constants.GripOpGrasHeight;                    
         }
-        // De picker 
+        // De picker geeft de geselecteerde waarde mee aan Meting.Eenheid, en geeft de user feedback
         async void Picker_SelectedIndexChanged(object sender, EventArgs e)
         {
            var lengte = (Meting)BindingContext;                        
            lengte.Eenheid = Picker.Items[Picker.SelectedIndex];                     
-           await DisplayAlert("je hebt gekozen voor de meeteenheid", lengte.Eenheid,  "ok");
-            
-
+           await DisplayAlert("je hebt gekozen voor de meeteenheid", lengte.Eenheid,  "ok");           
         }
 
         //Hier wordt de datepicker als alternatieve invoermethode van Meting.Dag aangesteld en wordt de gebruiker teruggebracht naar de meetlijst.
@@ -37,7 +35,6 @@ namespace Prototype
             kalenderDag.Dag = e.NewDate;
             await App.Database.SaveMetingAsync(kalenderDag);
             await Navigation.PopAsync();
-
         }
 
         // Hier wordt de save meting aangesproken zodat de laatst bewerkerkte of toegevoegde entry toegevoegd, of vervangen kan worden en wordt de gebruiker teruggebracacht naar de meetlijst.
@@ -47,7 +44,6 @@ namespace Prototype
             meetGegevens.Dag = DateTime.Now;
             await App.Database.SaveMetingAsync(meetGegevens);
             await Navigation.PopAsync();
-
         }
   
         //Hier wordt de delete meting van de database aangesproken zodat de laatst bewerkte of toegevoegde entry gedelete kan worden en wordt de gebruiker teruggebracht naar de meetlijst.
