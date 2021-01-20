@@ -18,9 +18,18 @@ namespace Prototype
         {
             InitializeComponent();
             BackgroundColor = Constants.BackgroundColor;
-            GripOpGras.HeightRequest = Constants.GripOpGrasHeight;
+            GripOpGras.HeightRequest = Constants.GripOpGrasHeight;                    
+        }
+        // De picker 
+        async void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           var lengte = (Meting)BindingContext;                        
+           lengte.Eenheid = Picker.Items[Picker.SelectedIndex];                     
+           await DisplayAlert("je hebt gekozen voor de meeteenheid", lengte.Eenheid,  "ok");
+            
 
         }
+
         //Hier wordt de datepicker als alternatieve invoermethode van Meting.Dag aangesteld en wordt de gebruiker teruggebracht naar de meetlijst.
         async void DatePicker_OnDateSelected(object sender, DateChangedEventArgs e)
         {
@@ -55,6 +64,6 @@ namespace Prototype
             await Navigation.PopAsync();
         }
 
-
+     
     }
 }
