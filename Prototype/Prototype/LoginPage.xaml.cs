@@ -38,19 +38,11 @@ namespace Prototype
                 await DisplayAlert("Login", "Login Succes", "Oke");
                 
                 await App.UDatabase.SaveUserAsync(user);
-                await Navigation.PushAsync(new WelkomDashboard());
-                //if (Device.OS == TargetPlatform.Android) ;
-
-
-
-
-
+                await Navigation.PushAsync(new WelkomDashboard());           
             }
             
             else
             {
-
-
                 await DisplayAlert("Login", "Login is onjuist", "Oke");
                 await Navigation.PopAsync();
                 await DisplayAlert("Uw invoer is leeg","Probeer het nog eens", "Oke");

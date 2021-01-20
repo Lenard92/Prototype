@@ -13,7 +13,7 @@ namespace Prototype
         public string Username { get; set; }
         public string Password { get; set; }
 
-        //een cast zodat de gegevens niet door elkaar gehaald worden tijdens de passwordcheck
+        // zodat de gegevens niet door elkaar gehaald worden tijdens de passwordcheck
         public User() { }
         public User(string Username, string Password)
         {

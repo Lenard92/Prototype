@@ -45,6 +45,7 @@ namespace Prototype
             await App.Database.SaveMetingAsync(meetGegevens);
             await Navigation.PopAsync();
         }
+
   
         //Hier wordt de delete meting van de database aangesproken zodat de laatst bewerkte of toegevoegde entry gedelete kan worden en wordt de gebruiker teruggebracht naar de meetlijst.
         async void Verwijderen_Clicked(object sender, System.EventArgs e)
