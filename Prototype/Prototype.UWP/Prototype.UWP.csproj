@@ -7,8 +7,8 @@
     <ProjectGuid>{726B829F-CBB3-4545-AE1B-3BE9EA53FAA6}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Prototype.UWP</RootNamespace>
-    <AssemblyName>Prototype.UWP</AssemblyName>
+    <RootNamespace>FeedCalculator</RootNamespace>
+    <AssemblyName>FeedCalculator</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.17763.0</TargetPlatformVersion>
@@ -75,6 +75,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>false</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -104,6 +105,21 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\FeedCalculator.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\FeedCalculator.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\FeedCalculator.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\FeedCalculator.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\FeedCalculator.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\FeedCalculator.scale-100.png" />
+    <Content Include="Assets\FeedCalculator.scale-125.png" />
+    <Content Include="Assets\FeedCalculator.scale-150.png" />
+    <Content Include="Assets\FeedCalculator.scale-200.png" />
+    <Content Include="Assets\FeedCalculator.scale-400.png" />
+    <Content Include="Assets\FeedCalculator.targetsize-16.png" />
+    <Content Include="Assets\FeedCalculator.targetsize-24.png" />
+    <Content Include="Assets\FeedCalculator.targetsize-256.png" />
+    <Content Include="Assets\FeedCalculator.targetsize-32.png" />
+    <Content Include="Assets\FeedCalculator.targetsize-48.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
