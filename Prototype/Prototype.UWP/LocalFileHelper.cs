@@ -18,13 +18,15 @@ namespace Prototype.UWP
         // Deze filehelper vraagt de locatie van de database op via de interface of genereert zelf een lokaal path
         public string GetLocalFilePath(string fileName)
         {
-            string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
-            if (!Directory.Exists(libFolder))
+
+            var path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+            string fullPath = Path.Combine(path, fileName);
+
+            if (!Directory.Exists(path))
             {
-                Directory.CreateDirectory(libFolder);
+                Directory.CreateDirectory(path);
             }
-                    return Path.Combine(libFolder, fileName);
+            return fullPath;
             
         }
     }
