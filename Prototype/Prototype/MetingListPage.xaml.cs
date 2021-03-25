@@ -15,14 +15,18 @@ namespace Prototype
 		public MetingListPage ()
 		{
 			InitializeComponent ();
-            this.Title = "Bewerkbare meetlijst";
+            this.Title = "Calculated formulations; you can add one here ----->";
+            this.BackgroundColor = Constants.BackgroundColor;
+            
             
 
             BackgroundColor = Constants.BackgroundColor;
             var toolbarItem = new ToolbarItem
             {
-                Text = "+"
+                Text = "add"
+                
             };
+            
             // Deze toolbar maakt de items interactief, waardoor ze, indien geselcteerd, in dit geval navigeren naar de MetingPagina om daar bewerkt te worden
             toolbarItem.Clicked += async (sender, e) =>
             {

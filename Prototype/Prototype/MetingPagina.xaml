@@ -30,7 +30,8 @@
                        Placeholder="" 
                        TextColor="Black"  
                        Grid.Row="1" 
-                       Grid.Column="1"  />
+                       Grid.Column="1"
+                       BackgroundColor="DarkSeaGreen"/>
 
                 <Label Text="Please select an animal" 
                        TextColor="Black"  

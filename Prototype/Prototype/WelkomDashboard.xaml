@@ -22,13 +22,11 @@
 
             <StackLayout
                     Orientation="Horizontal">
-                <Button Text="Previous entries"  HorizontalOptions="Center" BackgroundColor="Orange" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarMeetLijst_Clicked"/>
-                <Button Text="Back to login"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked"/>
-                <Button Text="Formulate"  HorizontalOptions="Center" BackgroundColor="DarkGreen" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked"/>
-                      
+                <Button Text="Back to login"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked" FontAttributes="Bold"/>
+                <Button Text="Formulate"  HorizontalOptions="Center" BackgroundColor="DarkGreen" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarMeting_Clicked" FontAttributes="Bold"/>
+                <Button Text="Previous entries"  HorizontalOptions="Center" BackgroundColor="Orange" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarMeetLijst_Clicked" FontAttributes="Bold"/>
+                <Button Text="Datamanagement"  HorizontalOptions="Center" BackgroundColor="Purple" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="Naarfilldb_Clicked" FontAttributes="Bold"/>
 
-           
-            
 
 
             </StackLayout>

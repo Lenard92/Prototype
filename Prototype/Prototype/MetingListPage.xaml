@@ -2,15 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Prototype.MetingListPage">
-   
+
 
     <ContentPage.Content>
      
         <!--Deze listview presenteert alle geregistreerde meetgegevens in een lijst die emt elke entry wordt bijgewerkt--> 
         
         <!--ik wilde hier nog een collection view van maken maar voor nu heeft dat geen prioriteit-->
-
+        
         <ListView x:Name="MeetListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Meting_ItemSelected">
+            
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell  Text="Meting van"  TextColor="Black"    Detail="{Binding Dag}" DetailColor="Black" />

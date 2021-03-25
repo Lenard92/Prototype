@@ -23,10 +23,7 @@ namespace Prototype
             return udatabase.Table<User>().ToListAsync();
         }
         // deze functie haalt de meest recente user op (aangepast of nieuw)
-        public Task<User> GetUserAsync(int id)
-        {
-            return udatabase.Table<User>().Where(i => i.Id == id).FirstOrDefaultAsync();
-        }
+        
         // deze functie voegt de nieuwe of aangepaste user toe aan de database
         public Task<int> SaveUserAsync(User user)
         {

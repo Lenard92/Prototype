@@ -23,26 +23,22 @@ namespace Prototype
         // De picker geeft de geselecteerde waarde mee aan Meting.Eenheid, en geeft de user feedback
         async void Picker_SelectedIndexChanged(object sender, EventArgs e)
         {
-           var lengte = (Meting)BindingContext;                        
-           lengte.Eenheid = Picker.Items[Picker.SelectedIndex];                     
-           await DisplayAlert("je hebt gekozen voor de meeteenheid", lengte.Eenheid,  "ok");           
+                             
+           await DisplayAlert("je hebt gekozen voor de meeteenheid", 
+               "lol","ok");           
         }
 
         //Hier wordt de datepicker als alternatieve invoermethode van Meting.Dag aangesteld en wordt de gebruiker teruggebracht naar de meetlijst.
         async void DatePicker_OnDateSelected(object sender, DateChangedEventArgs e)
         {
-            var kalenderDag = (Meting)BindingContext;
-            kalenderDag.Dag = e.NewDate;
-            await App.Database.SaveMetingAsync(kalenderDag);
+           
             await Navigation.PopAsync();
         }
 
         // Hier wordt de save meting aangesproken zodat de laatst bewerkerkte of toegevoegde entry toegevoegd, of vervangen kan worden en wordt de gebruiker teruggebracacht naar de meetlijst.
         async void Opslaan_Clicked(object sender, System.EventArgs e)
         {
-            var meetGegevens = (Meting)BindingContext;
-            meetGegevens.Dag = DateTime.Now;
-            await App.Database.SaveMetingAsync(meetGegevens);
+           
             await Navigation.PopAsync();
         }
 

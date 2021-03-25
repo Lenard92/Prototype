@@ -37,6 +37,15 @@ namespace Prototype
         {
             await Navigation.PopAsync();
         }
+        async void NaarMeting_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MetingPagina());
+        }
+        async void Naarfilldb_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Welkom2());
+        }
+
     }
 
 }

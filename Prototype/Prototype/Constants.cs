@@ -12,7 +12,7 @@ namespace Prototype
         public static bool IsDev = true;
         public static Color BackgroundColor = Color.ForestGreen;
         public static Color MainTextColor = Color.Black;
-        
+      
 
         public static int LoginIconHeight = 120;
         public static int GripOpGrasHeight = 250;
