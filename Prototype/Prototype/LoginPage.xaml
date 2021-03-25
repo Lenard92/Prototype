@@ -30,9 +30,11 @@
                 
                 <!--De combinatie van username en password is nodig om de user op te slaan in de userdatabase in combinatie met een unieke key die de user.Id vormt-->            
                 
-                <Button x:Name="Btn_StartBerekening" Text="Start berekening" Clicked="Btn_StartBerekening_Clicked"/>
-                <Button x:Name="Btn_Grondstonffen" Text="Grondstoffen" Clicked="Btn_Grondstonffen_Clicked"/>
-                <Button x:Name="Btn_AddData" Text="Data toevoegen" Clicked="Btn_AddData_Clicked"/>
+                <Label x:Name="Lbl_Username" Text="Gebruikersnaam"/>
+                <Entry x:Name="Entry_Username" Text="{Binding Username}" Placeholder="Voer hier uw gebruikersnaam in"/>
+                <Label x:Name="Lbl_Password" Text="wachtwoord"/>
+                <Entry x:Name="Entry_Password" Text="{Binding Password}" Placeholder="voer hier uw wachtwoord in"/>
+                <Button x:Name="Btn_Signin" Text="log in" Clicked="SignInProcedure"/>
 
             </StackLayout>
 

@@ -16,10 +16,9 @@ namespace Prototype
 		{
 			InitializeComponent ();
             this.Title = "Bewerkbare meetlijst";
-
+            
 
             BackgroundColor = Constants.BackgroundColor;
-
             var toolbarItem = new ToolbarItem
             {
                 Text = "+"
