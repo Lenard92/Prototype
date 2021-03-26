@@ -21,24 +21,36 @@ namespace Prototype
             GripOpGras.HeightRequest = Constants.GripOpGrasHeight;                    
         }
         // De picker geeft de geselecteerde waarde mee aan Meting.Eenheid, en geeft de user feedback
-        async void Picker_SelectedIndexChanged(object sender, EventArgs e)
+       
+
+
+        async void Picker_SelectedIndexChanged(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
-                             
-           await DisplayAlert("je hebt gekozen voor de meeteenheid", 
-               "lol","ok");           
+            if (e.SelectedItem != null)
+            {
+                var nieuwewaarde = (User)BindingContext;
+                nieuwewaarde = e.nieuwewaarde;
+            }
         }
+        
 
         //Hier wordt de datepicker als alternatieve invoermethode van Meting.Dag aangesteld en wordt de gebruiker teruggebracht naar de meetlijst.
-        async void DatePicker_OnDateSelected(object sender, DateChangedEventArgs e)
+        async void DatePicker_OnDateSelected5(object sender, DateChangedEventArgs e)
         {
-           
+            var kalenderDag = (User)BindingContext;
+            kalenderDag.Dag = e.NewDate;
+            //await App.Database.SaveUserAsync(kalenderDag);
             await Navigation.PopAsync();
+            
         }
 
         // Hier wordt de save meting aangesproken zodat de laatst bewerkerkte of toegevoegde entry toegevoegd, of vervangen kan worden en wordt de gebruiker teruggebracacht naar de meetlijst.
         async void Opslaan_Clicked(object sender, System.EventArgs e)
         {
-           
+
+            var meetGegevens = (User)BindingContext;
+            meetGegevens.Dag = DateTime.Now;
+            //await App.Database.SaveUserAsync(meetGegevens);
             await Navigation.PopAsync();
         }
 

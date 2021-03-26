@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image x:Name="GripOpGras" Source="GripOpGras.png" Margin="0,10,0,0"/>
-            <Label Text="Enter or adjust your personal formulations" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
+            <Label Text="Enter or adjust your formulations" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large"/>
          
             <!--Er wordt gebruik gemaakt entries die bindings naar de betreffende class sturen om de gegevens van de tabel mee te vullen-->
 
@@ -16,53 +16,166 @@
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                
-                <Label Text="Formulation result" 
+
+                <Label Text="Toggle Animal" 
                        TextColor="Black" 
                        Grid.Row="1" 
                        Grid.Column="0" 
                        HorizontalOptions="Start" 
                        VerticalOptions="Center">
                 </Label>
-                
-                <Entry Text="{Binding GrasMeting}" 
-                       Keyboard="Numeric" 
-                       Placeholder="" 
-                       TextColor="Black"  
+                <Picker x:Name="Picker" 
+                        Grid.Row="1" 
+                        Grid.Column="1"
+                        Title="{Binding Animal}" 
+                        TextColor="Black"
+                        SelectedIndex="{Binding SelectedIndex}"                       
+                        SelectedIndexChanged="Picker_SelectedIndexChanged"                                                
+                    >
+                    <Picker.Items>
+                        <x:String>Poultry</x:String>
+                        <x:String>Pigs</x:String>
+                        <x:String>Cows</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="% of total feed" 
+                       TextColor="Black" 
                        Grid.Row="1" 
-                       Grid.Column="1"
-                       BackgroundColor="DarkSeaGreen"/>
+                       Grid.Column="2" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                </Label>
+                <Label Text="% of desired intake" 
+                       TextColor="Black" 
+                       Grid.Row="1" 
+                       Grid.Column="3" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                </Label>
 
-                <Label Text="Please select an animal" 
-                       TextColor="Black"  
+                <Label Text="Toggle CP source" 
+                       TextColor="Black" 
                        Grid.Row="2" 
                        Grid.Column="0" 
                        HorizontalOptions="Start" 
                        VerticalOptions="Center">
                 </Label>
-                
-                <Picker x:Name="Picker" 
+                <Picker x:Name="Picker1" 
                         Grid.Row="2" 
                         Grid.Column="1"
-                        Title="{Binding Eenheid}" 
+                        Title="{Binding CP}" 
                         TextColor="Black"
                         SelectedIndex="{Binding SelectedIndex}"                       
-                        SelectedIndexChanged="Picker_SelectedIndexChanged"                                                
-                    >
-            <Picker.Items>
-                    <x:String>Poultry</x:String>
-                        <x:String>Pigs</x:String>
-                        <x:String>Cows</x:String>
-            </Picker.Items>
-                             </Picker>
-                <Label Text="" 
-                       TextColor="Black"  
+                        SelectedIndexChanged="Picker2_SelectedIndexChanged"  
+                       > 
+                    <Picker.Items>
+                        <x:String>wheypowder</x:String>
+                        <x:String>egg</x:String>
+                        <x:String>bloodmeal</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="Entry_Username1" Text="{Binding Username1}"  Grid.Row="2" 
+                       Grid.Column="2" Placeholder="Please specify quantity" PlaceholderColor="Black" FontSize="Small" />
+                <Label Text="hier komt som" 
+                       TextColor="Black" 
+                       Grid.Row="2" 
+                       Grid.Column="3" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                </Label>
+
+                <Label Text="Toggle CH source" 
+                       TextColor="Black" 
                        Grid.Row="3" 
                        Grid.Column="0" 
                        HorizontalOptions="Start" 
                        VerticalOptions="Center">
+                    </Label>
+                    <Picker x:Name="Picker2" 
+                        Grid.Row="3" 
+                        Grid.Column="1"
+                        Title="{Binding Eenheid}" 
+                        TextColor="Black"
+                        SelectedIndex="{Binding SelectedIndex}"                       
+                        SelectedIndexChanged="Picker3_SelectedIndexChanged"                                                
+                    >
+                        <Picker.Items>
+                            <x:String>maize</x:String>
+                            <x:String>beans</x:String>
+                            <x:String>rye</x:String>
+                        </Picker.Items>
+                    </Picker>
+                <Entry x:Name="Entry_Username2" Text="{Binding Username2}" Grid.Row="3" 
+                       Grid.Column="2" Placeholder="Please specify quantity" PlaceholderColor="Black" FontSize="Small" />
+                <Label Text="hier komt som" 
+                       TextColor="Black" 
+                       Grid.Row="3" 
+                       Grid.Column="3" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
                 </Label>
- 
+                
+                <Label Text="Toggle CA source" 
+                       TextColor="Black" 
+                       Grid.Row="4" 
+                       Grid.Column="0" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                    </Label>
+                    <Picker x:Name="Picker3" 
+                        Grid.Row="4" 
+                        Grid.Column="1"
+                        Title="{Binding Eenheid}" 
+                        TextColor="Black"
+                        SelectedIndex="{Binding SelectedIndex}"                       
+                        SelectedIndexChanged="Picker4_SelectedIndexChanged"                                                
+                    >
+                        <Picker.Items>
+                            <x:String>limestone</x:String>
+                            <x:String>DCF</x:String>
+                            <x:String>Bonemeal</x:String>
+                        </Picker.Items>
+                    </Picker>
+                <Entry x:Name="Entry_Username3" Text="{Binding Username3}" Grid.Row="4" 
+                       Grid.Column="2" Placeholder="Please specify quantity" PlaceholderColor="Black" FontSize="Small"   />
+                <Label Text="hier komt som" 
+                       TextColor="Black" 
+                       Grid.Row="4" 
+                       Grid.Column="3" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                </Label>
+                <Label Text="Toggle PH source" 
+                       TextColor="Black" 
+                       Grid.Row="5" 
+                       Grid.Column="0" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                    </Label>
+                    <Picker x:Name="Picker4" 
+                        Grid.Row="5" 
+                        Grid.Column="1"
+                        Title="{Binding Eenheid}" 
+                        TextColor="Black"
+                        SelectedIndex="{Binding SelectedIndex}"                       
+                        SelectedIndexChanged="Picker5_SelectedIndexChanged"                                                
+                    >
+                        <Picker.Items>
+                        <x:String>soybeanoil</x:String>
+                            <x:String>SFO</x:String>
+                        <x:String>Om3</x:String>
+                        </Picker.Items>
+                    </Picker>
+                <Entry x:Name="Entry_Username4" Text="{Binding Username4}" Grid.Row="5" 
+                       Grid.Column="2" Placeholder="Please specify quantity" PlaceholderColor="Black" FontSize="Small" />
+                <Label Text="hier komt som" 
+                       TextColor="Black" 
+                       Grid.Row="5" 
+                       Grid.Column="3" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center">
+                </Label>
+
             </Grid>
          
             <StackLayout

@@ -43,7 +43,7 @@ namespace Prototype
         }
         async void Naarfilldb_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Welkom2());
+            await Navigation.PushAsync(new Welkom());
         }
 
     }

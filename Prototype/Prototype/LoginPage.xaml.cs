@@ -32,17 +32,17 @@ namespace Prototype
         {
             
 
-            User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (user.CheckInformation())
+            //User user = new User(Entry_Username.Text, Entry_Password.Text);
+           // if (user.CheckInformation())
             {
                 //await DisplayAlert("Login", "Login Succes", "Oke");
                 
                 //await App.UDatabase.SaveUserAsync(user);
                 await Navigation.PushAsync(new WelkomDashboard());           
-            }
+            //}
             
-            else
-            {
+            //else
+            //{
                 //await DisplayAlert("Login", "Login is onjuist", "Oke");
                 await Navigation.PopAsync();
                 await DisplayAlert("Please enter your details","Don't be shy!", "You're right, I'm amazing");

@@ -9,22 +9,26 @@ namespace Prototype
     {
         // De user struct met unieke key
         [PrimaryKey, AutoIncrement]
+        public string Dier { get; set; }
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public int CP { get; set; }
+        public int CH  { get; set; }
+        public int CA { get; set; }
+        public int PH { get; set; }
+        public DateTime Dag { get; set; }
 
-        // zodat de gegevens niet door elkaar gehaald worden tijdens de passwordcheck
-        public User() { }
-        public User(string Username, string Password)
+    // zodat de gegevens niet door elkaar gehaald worden tijdens de passwordcheck
+    public User() { }
+        public User(string Username)
         {
-            this.Username = Username;
-            this.Password = Password;
+            this.Dier = Username;
+            
         }
 
         // deze functie checkt of een entry leeg is of niet.
         public bool CheckInformation()
         {
-            if (!this.Username.Equals("") && !this.Password.Equals(""))
+            if (!this.Dier.Equals("Poultry") )
                 return true;
             else
                 return false;
