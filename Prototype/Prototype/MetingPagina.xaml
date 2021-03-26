@@ -30,8 +30,9 @@
                         Title="{Binding Animal}" 
                         TextColor="Black"
                         SelectedIndex="{Binding SelectedIndex}"                       
-                        SelectedIndexChanged="Picker_SelectedIndexChanged"                                                
-                    >
+                        >
+                    <!--SelectedIndexChanged="Picker_SelectedIndexChanged"-->                                                
+                    <!-->-->
                     <Picker.Items>
                         <x:String>Poultry</x:String>
                         <x:String>Pigs</x:String>
@@ -66,8 +67,9 @@
                         Title="{Binding CP}" 
                         TextColor="Black"
                         SelectedIndex="{Binding SelectedIndex}"                       
-                        SelectedIndexChanged="Picker2_SelectedIndexChanged"  
-                       > 
+                        >
+                    <!--SelectedIndexChanged="Picker2_SelectedIndexChanged"-->  
+                        
                     <Picker.Items>
                         <x:String>wheypowder</x:String>
                         <x:String>egg</x:String>
@@ -91,14 +93,15 @@
                        HorizontalOptions="Start" 
                        VerticalOptions="Center">
                     </Label>
-                    <Picker x:Name="Picker2" 
+                <Picker x:Name="Picker2" 
                         Grid.Row="3" 
                         Grid.Column="1"
                         Title="{Binding Eenheid}" 
                         TextColor="Black"
                         SelectedIndex="{Binding SelectedIndex}"                       
-                        SelectedIndexChanged="Picker3_SelectedIndexChanged"                                                
-                    >
+                        >
+                    <!--SelectedIndexChanged="Picker3_SelectedIndexChanged"-->                                                
+                    
                         <Picker.Items>
                             <x:String>maize</x:String>
                             <x:String>beans</x:String>
@@ -122,14 +125,15 @@
                        HorizontalOptions="Start" 
                        VerticalOptions="Center">
                     </Label>
-                    <Picker x:Name="Picker3" 
+                <Picker x:Name="Picker3" 
                         Grid.Row="4" 
                         Grid.Column="1"
                         Title="{Binding Eenheid}" 
                         TextColor="Black"
                         SelectedIndex="{Binding SelectedIndex}"                       
-                        SelectedIndexChanged="Picker4_SelectedIndexChanged"                                                
-                    >
+                        >
+                    <!--SelectedIndexChanged="Picker4_SelectedIndexChanged"-->                                                
+                    
                         <Picker.Items>
                             <x:String>limestone</x:String>
                             <x:String>DCF</x:String>
@@ -152,14 +156,15 @@
                        HorizontalOptions="Start" 
                        VerticalOptions="Center">
                     </Label>
-                    <Picker x:Name="Picker4" 
+                <Picker x:Name="Picker4" 
                         Grid.Row="5" 
                         Grid.Column="1"
                         Title="{Binding Eenheid}" 
                         TextColor="Black"
                         SelectedIndex="{Binding SelectedIndex}"                       
-                        SelectedIndexChanged="Picker5_SelectedIndexChanged"                                                
-                    >
+                        >
+                    <!--SelectedIndexChanged="Picker5_SelectedIndexChanged"-->                                                
+                    
                         <Picker.Items>
                         <x:String>soybeanoil</x:String>
                             <x:String>SFO</x:String>
@@ -189,8 +194,8 @@
                         MinimumDate="01/01/2020 "
                         MaximumDate="12/12/2022 "
                         TextColor="White"                        
-                        DateSelected="DatePicker_OnDateSelected"                        
-                        />
+                        /> <!--DateSelected="DatePicker_OnDateSelected"-->                        
+                        
                 <StackLayout
                     Orientation="Horizontal">
                     

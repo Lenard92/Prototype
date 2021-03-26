@@ -13,6 +13,8 @@ namespace Prototype
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MetingPagina : ContentPage
     {
+        private const bool V = true;
+
         //genereer een blauwe MetingPagina met het GripOpGrasplaatje in een specifieke afmeting.
         public MetingPagina()
         {
@@ -24,14 +26,16 @@ namespace Prototype
        
 
 
-        async void Picker_SelectedIndexChanged(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem != null)
-            {
-                var nieuwewaarde = (User)BindingContext;
-                nieuwewaarde = e.nieuwewaarde;
-            }
-        }
+        //async void Picker_SelectedIndexChanged(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        //{
+            //if (e.SelectedItem != null)
+            //{
+           // e = V
+
+                //await App.Database.SaveUserAsync(kalenderDag);
+               // await Navigation.PopAsync();
+           //}
+        //}
         
 
         //Hier wordt de datepicker als alternatieve invoermethode van Meting.Dag aangesteld en wordt de gebruiker teruggebracht naar de meetlijst.

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using Xamarin.Forms;
 
 namespace Prototype
 {
@@ -32,6 +33,11 @@ namespace Prototype
                 return true;
             else
                 return false;
+        }
+
+        public static implicit operator SelectedItemChangedEventArgs(User v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

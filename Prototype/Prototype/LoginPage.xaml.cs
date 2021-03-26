@@ -38,14 +38,14 @@ namespace Prototype
                 //await DisplayAlert("Login", "Login Succes", "Oke");
                 
                 //await App.UDatabase.SaveUserAsync(user);
-                await Navigation.PushAsync(new WelkomDashboard());           
-            //}
-            
-            //else
-            //{
+                await Navigation.PushAsync(new WelkomDashboard());
+                //}
+
+                //else
+                //{
                 //await DisplayAlert("Login", "Login is onjuist", "Oke");
-                await Navigation.PopAsync();
-                await DisplayAlert("Please enter your details","Don't be shy!", "You're right, I'm amazing");
+                await Navigation.PushAsync(new WelkomDashboard());
+                //await DisplayAlert("Please enter your details","Don't be shy!", "You're right, I'm amazing");
             }
 
         }
