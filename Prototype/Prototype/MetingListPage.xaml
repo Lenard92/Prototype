@@ -13,7 +13,7 @@
         <ListView x:Name="MeetListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemSelected="Meting_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell  Text="Meting van"  TextColor="Black"    Detail="{Binding Dag}" DetailColor="Black" />
+                    <TextCell  Text="Meting van"  TextColor="White"    Detail="{Binding Dag}" DetailColor="White" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

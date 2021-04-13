@@ -13,7 +13,7 @@
 
         <StackLayout
             Orientation="Vertical">
-            <Label Text="Welcome!" TextColor="Black"   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Header"></Label>
+            <Label Text="Welkom!" TextColor="White"   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Label>
 
 
 
@@ -22,9 +22,8 @@
 
             <StackLayout
                     Orientation="Horizontal">
-                <Button Text="Previous entries"  HorizontalOptions="Center" BackgroundColor="Orange" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarMeetLijst_Clicked"/>
-                <Button Text="Back to login"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked"/>
-                <Button Text="Formulate"  HorizontalOptions="Center" BackgroundColor="DarkGreen" TextColor="Black" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked"/>
+                <Button Text="Naar uw activiteiten"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" WidthRequest="170" HeightRequest="80" Clicked="NaarMeetLijst_Clicked"/>
+                <Button Text="terug naar het inlogscherm"  HorizontalOptions="Center" BackgroundColor="Blue" TextColor="White" WidthRequest="170" HeightRequest="80" Clicked="NaarInlogScherm_Clicked"/>
                       
 
            

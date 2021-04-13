@@ -26,15 +26,15 @@
             
                 <!--De activityindicator staat tijdens development uit, maar zou de user meer feedback moeten geven over de verwerking van zijn request of input-->
                 
-                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning ="False" />
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="False" />
                 
                 <!--De combinatie van username en password is nodig om de user op te slaan in de userdatabase in combinatie met een unieke key die de user.Id vormt-->            
                 
-                <Label x:Name="Lbl_Username" Text="Student Number" FontSize="Large"/>
-                <Entry x:Name="Entry_Username" Text="{Binding Username}" Placeholder="please provide your number or mail" BackgroundColor="Gray" PlaceholderColor="Black" FontSize="Title" />
-                <Label x:Name="Lbl_Password" Text="Password" FontSize="Large"/>
-                <Entry x:Name="Entry_Password" Text="{Binding Password}" Placeholder="please provide your password " BackgroundColor="Gray" PlaceholderColor="Black"  FontSize="Title"/>
-                <Button x:Name="Btn_Signin" Text="log in" Clicked="SignInProcedure" BackgroundColor="DarkGreen" TextColor="black" FontAttributes="Bold" FontSize="Large"/>
+                <Label x:Name="Lbl_Username" Text="Gebruikersnaam"/>
+                <Entry x:Name="Entry_Username" Text="{Binding Username}" Placeholder="Voer hier uw gebruikersnaam in"/>
+                <Label x:Name="Lbl_Password" Text="wachtwoord"/>
+                <Entry x:Name="Entry_Password" Text="{Binding Password}" Placeholder="voer hier uw wachtwoord in"/>
+                <Button x:Name="Btn_Signin" Text="log in" Clicked="SignInProcedure"/>
 
             </StackLayout>
 

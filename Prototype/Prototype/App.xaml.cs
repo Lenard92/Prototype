@@ -43,7 +43,7 @@ namespace Prototype
             }
         }
         //onderstaande functies worden standaard gegenereerd, tijdens het ontwikkelen van het MVP was het nog niet noodzakelijk om hier iets mee te doen 
-        
+
         protected override void OnStart()
         {
             // Handle when your app starts
