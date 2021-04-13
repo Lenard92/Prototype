@@ -1,6 +1,8 @@
 # Prototype
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!! de code staat op master !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+prototype.docx is het procsesverslag dat simultaan ontwikkelt is met het prototype. Dit ddocument kan u veel vertellen over het prototype en de ontwikkeling ervan.
+
 [Korte inleiding]
 
 Leuk dat je verder wilt werken aan deze aplicatie; ik heb er met veel plezier aan gewerkt en ik zal je wegwijsmaken in wat er tot nu toe gebeurd is, welke ideeën er nog 'under construction' zijn en hoe je het beste verder kunt gaan. 
@@ -11,7 +13,7 @@ Wat je hier ziet is het resultaat van een MVP vanuit onze opdrachtgever, met wat
 
 "De mobiele applicatie moet werken met een lokale database die meetgegevens opslaat in een entry, inclusief timestamp. Vervolgens moet er een list gegenereerd worden op basis van de tables van de database en moeten de gegevens via die list in de applicatie uitgelezen kunnen worden. De app moet makkelijk in gebruik zijn en platformonafhankelijk werken."
 
-[De meetdatabase en diens entries]  
+[De meetdatabase en entries]  
 
 (! Het project maakt gebruik van een .Net library en de gebruikte SQLite package heet: sqlite-net-pcl by SQLite-net versie 1.7.335 https://github.com/praeclarum/sqlite-net )
 
